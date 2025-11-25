@@ -1,5 +1,0 @@
-{
-  "/api/send-to-sheet/route": "app/api/send-to-sheet/route.js",
-  "/page": "app/page.js",
-  "/thank-you/page": "app/thank-you/page.js"
-}
