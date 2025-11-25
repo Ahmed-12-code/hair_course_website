@@ -324,11 +324,13 @@ export default function HomePage() {
                   <AccordionContent className="space-y-6 pt-4">
                     <div className="grid gap-4">
                       {[
-                        { name: "زيت صدمة", image: "/oil-bottle.jpg", icon: Sparkles },
-                        { name: "تونك الفراغات", image: "/tonic-bottle.jpg", icon: Zap },
+                        { name: "تونك تنبيت الفراغات", image: "/oil-bottle.jpg", icon: Sparkles },
+                        { name: "سيروم الترطيب ", image: "/tonic-bottle.jpg", icon: Zap },
+                        { name: "تونك تنبيت الفراغات", image: "/oil-bottle.jpg", icon: Sparkles },
                         { name: "ماسك الأرقان بالحبة السوداء", image: "/argan-mask.jpg", icon: Heart },
-                        { name: "سيروم الترطيب", image: "/serum-bottle.jpg", icon: Sparkles },
-                        { name: "سدر أو حنا بالأعشاب (اختاروا واحد فقط)", image: "/sidr-henna.jpg", icon: Leaf },
+                        { name: "حنا او سدر بالاعشاب", image: "/henna.jpg", icon: Zap },
+                        { name: "زيت صدمة", image: "/serum-bottle.jpg", icon: Sparkles },
+                        { name: "شامبو الكافيين [ بالامكان اضافته 75﷼]", image: "/sidr-henna.jpg", icon: Leaf },
                       ].map((product, index) => {
                         const Icon = product.icon
                         return (
