@@ -326,7 +326,6 @@ export default function HomePage() {
                       {[
                         { name: "تونك تنبيت الفراغات", image: "/oil-bottle.jpg", icon: Sparkles },
                         { name: "سيروم الترطيب ", image: "/tonic-bottle.jpg", icon: Zap },
-                        { name: "تونك تنبيت الفراغات", image: "/oil-bottle.jpg", icon: Sparkles },
                         { name: "ماسك الأرقان بالحبة السوداء", image: "/argan-mask.jpg", icon: Heart },
                         { name: "حنا او سدر بالاعشاب", image: "/henna.jpg", icon: Zap },
                         { name: "زيت صدمة", image: "/serum-bottle.jpg", icon: Sparkles },
