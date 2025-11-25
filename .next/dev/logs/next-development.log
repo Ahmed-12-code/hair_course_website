@@ -1,0 +1,11 @@
+[00:00:01.538] Server  LOG      ✓ Ready in 1076ms
+[00:00:04.590] Server  LOG      ○ Compiling /thank-you ...
+[00:00:05.817] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:06.871] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:06.871] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/thank-you","route":"/thank-you"}
+[00:00:06.871] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/thank-you color: rgb(120, 120, 120) color: inherit {"dp":"/thank-you","o":"http://localhost:3000/thank-you","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764081322862}
+[00:00:11.231] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764081327189}
+[00:00:33.929] Browser LOG     Sending: {"area":"nasr","blonde":"yes","choice":"sidr","name":"waleed","phone":"0123434778","shampoo":"yes"}
+[00:00:34.152] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:00:34.152] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/thank-you color: rgb(120, 120, 120) color: inherit {"dp":"/thank-you","o":"http://localhost:3000/thank-you","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764081350140}
+[00:00:38.926] Server  LOG     Sending to sheet: {}
