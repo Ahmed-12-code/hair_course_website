@@ -25,19 +25,21 @@ export default function HomePage() {
   const influencersSection = useScrollAnimation({ threshold: 0.2 })
   const faqSection = useScrollAnimation({ threshold: 0.2 })
   const orderSection = useScrollAnimation({ threshold: 0.2 })
+  const [loading, setLoading] = useState(false);
 
   const [timeLeft, setTimeLeft] = useState({
-    days: 4,
+    days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0,
   })
-  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    const targetDate = new Date(Date.now() + 4 * 24 * 60 * 60 * 1000).getTime()
+    // Target date: November 30, 2025 at 23:59:59 Doha time (UTC+3)
+    // We set it as UTC time: 23:59:59 - 3 hours = 20:59:59 UTC
+    const targetDate = new Date("2025-11-30T20:59:59Z").getTime()
 
-    const timer = setInterval(() => {
+    const calculateTimeLeft = () => {
       const now = new Date().getTime()
       const difference = targetDate - now
 
@@ -51,10 +53,24 @@ export default function HomePage() {
       } else {
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 })
       }
-    }, 1000)
+    }
+
+    // Calculate immediately on mount
+    calculateTimeLeft()
+
+    const timer = setInterval(calculateTimeLeft, 1000)
 
     return () => clearInterval(timer)
   }, [])
+
+  const scrollToOrderForm = () => {
+    const orderForm = document.getElementById("order-form")
+    if (orderForm) {
+      orderForm.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
+  
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -111,7 +127,10 @@ export default function HomePage() {
 
           <div className="flex items-center gap-3 animate-slide-in-right">
             <ThemeToggle />
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground hover:scale-105 hover:shadow-xl transition-all duration-500 shadow-lg">
+            
+            <Button
+            onClick={scrollToOrderForm}
+             className="bg-primary hover:bg-primary/90 text-primary-foreground hover:scale-105 hover:shadow-xl transition-all duration-500 shadow-lg">
               اشترك الآن
             </Button>
           </div>
@@ -212,6 +231,7 @@ export default function HomePage() {
 
             <Button
               size="lg"
+              onClick={scrollToOrderForm}
               className="bg-primary hover:bg-primary/90 text-primary-foreground text-xl px-12 py-6 mt-8 animate-bounce-gentle cta-glow hover:scale-110 hover:rotate-1 transition-all duration-500 shadow-2xl"
               style={{ animationDelay: "1300ms" }}
             >
@@ -532,6 +552,7 @@ export default function HomePage() {
 
       {/* Order Form Section */}
       <section
+        id="order-form"
         ref={orderSection.ref as React.RefObject<HTMLElement>}
         className={`py-16 bg-card transition-all duration-1000 delay-100 ${
           orderSection.isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-95"
